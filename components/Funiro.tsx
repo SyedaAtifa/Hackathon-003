@@ -29,7 +29,7 @@ function Funiro() {
         {/* images */}
         <div className="w-full h-[500px] mt-8 flex items-center justify-center gap-2">
           <div>
-            <div className="">
+            <div>
               <Image src={"/images/furinture1.svg"} alt='funiro' width={451} height={312} />
             </div>
 
