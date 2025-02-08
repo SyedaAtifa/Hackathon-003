@@ -49,7 +49,7 @@ function CartPage() {
             handleQuantityChange(id, product.inventory + 1)
     }
 
-    const handledecrement = (id: string) => {
+    const handledecrement = () => {
         const product = cartItems.find((item) => item._id === id);
         if (product && product.inventory > 1)
             handleQuantityChange(id, product.inventory - 1)
