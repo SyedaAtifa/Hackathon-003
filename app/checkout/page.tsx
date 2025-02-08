@@ -9,8 +9,6 @@ import { Product } from '@/types/products'
 import { urlFor } from '@/sanity/lib/image';
 import { getCartItems } from '../actions/actions';
 import Swal from 'sweetalert2';
-import Link from 'next/link';
-import { EmailInput } from 'sanity';
 import { client } from '@/sanity/lib/client';
 
 function CheckoutPage() {
@@ -311,6 +309,10 @@ function CheckoutPage() {
 
                     <div className="w-[453px] h-[121px] flex flex-col gap-3 xsm:w-[340px]">
                         <input className="w-full h-[75px] border border-[#9F9F9F] rounded-[10px]" placeholder='Additional information'></input>
+                    </div>
+                     <div className="w-[300px] h-14 flex items-center justify-center">
+                        <button className="w-[200px] bg-[#B88E2F] text-white h-12"
+                        onClick={formValidation}>Submit</button>
                     </div>
                 </div>
 
