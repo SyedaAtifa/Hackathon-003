@@ -8,7 +8,6 @@ import { Product } from "@/types/products"
 import { addToCart } from "@/app/actions/actions"
 import Swal from "sweetalert2";
 import Header from "@/components/Header";
-import SOFA from "@/components/sofa/page";
 import Foot from "@/components/Foot";
 import Footer from "@/components/Footer";
 
