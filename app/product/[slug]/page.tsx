@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         addToCart(product)
     }
 
-    async function getProduct(slug: string): Promise<Product | any> {
+    async function getProduct(slug: string): Promise<Product> {
         return client.fetch(
             groq`*[_type == "product" && slug.current == $slug][0]{
             _id,
