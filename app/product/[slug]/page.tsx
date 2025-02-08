@@ -5,9 +5,8 @@ import Image from "next/image"
 import { urlFor } from "@/sanity/lib/image"
 import { client } from '@/sanity/lib/client'
 import { Product } from "@/types/products"
-import { addToCart, getCartItems } from "@/app/actions/actions"
+import { addToCart } from "@/app/actions/actions"
 import Swal from "sweetalert2";
-import { useEffect, useState } from "react"
 import Header from "@/components/Header";
 import SOFA from "@/components/sofa/page";
 import Foot from "@/components/Foot";
