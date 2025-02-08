@@ -17,21 +17,6 @@ interface ProductPageProps {
     params: Promise<{ slug: string }>
 }
 
-async function getProduct(slug: string): Promise<Product | any> {
-    return client.fetch(
-        groq`*[_type == "product" && slug.current == $slug][0]{
-        _id,
-        title,
-        _type,
-        price,
-        dicountPercentage,
-        tags,
-        description,
-        productImage,
-        }` , { slug }
-    )
-}
-
 export default async function ProductPage({ params }: ProductPageProps) {
     const { slug } = await params;
     const product = await getProduct(slug)
@@ -51,12 +36,27 @@ export default async function ProductPage({ params }: ProductPageProps) {
         addToCart(product)
     }
 
+    async function getProduct(slug: string): Promise<Product | any> {
+        return client.fetch(
+            groq`*[_type == "product" && slug.current == $slug][0]{
+            _id,
+            title,
+            _type,
+            price,
+            dicountPercentage,
+            tags,
+            description,
+            productImage,
+            }` , { slug }
+        )
+    }
+
    
     return (
         <div className="">
             <Header />
             <div className="w-screen h-screen flex gap-20 items-center justify-center">
-                <div className="">
+                <div className="w-[500px]">
                     {product.productImage && (
                         <Image
                             src={urlFor(product.productImage).url()}

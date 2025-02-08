@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { EmailInput } from 'sanity';
 import { client } from '@/sanity/lib/client';
 
-function page() {
+function CheckoutPage() {
 
     const [cartItems, setCartItems] = useState<Product[]>([]);
     const [discount, setDiscount] = useState<number>(0);
@@ -419,4 +419,4 @@ function page() {
     )
 }
 
-export default page;
+export default CheckoutPage;

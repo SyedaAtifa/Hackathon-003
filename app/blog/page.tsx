@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Image from 'next/image'
 import React from 'react'
 
-const page = () => {
+const BlogPage = () => {
     return (
         <div>
             <Header />
@@ -216,4 +216,4 @@ const page = () => {
     )
 }
 
-export default page
+export default BlogPage

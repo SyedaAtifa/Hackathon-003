@@ -21,11 +21,11 @@ const SOFA = () => {
   }, [])
 
   return (
-    <div className="w-screen mx-auto my-24 xsm:flex xsm:flex-col xsm:items-center xsm:justify-center md:w-[1100px]">
+    <div className="w-[1200px] xsm:w-[380px] mx-auto my-24 xsm:flex xsm:flex-col xsm:items-center xsm:justify-center">
       <h2 className="flex items-center justify-center font-poppins font-bold text-[40px] text-[#3A3A3A] xsm:text-3xl">Our Latest Products</h2>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+      <div className='grid xsm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {product.map((product) => (
-          <div key={product._id} className="flex flex-col gap-3 transition-transform duration-100 hover:scale-110 shadow-xl">
+          <div key={product._id} className="w-[300px] flex flex-col gap-3 transition-transform duration-100 hover:scale-110 shadow-xl">
             {product.slug?.current && (
               <Link href={`/product/${product.slug.current}`}>
                 {product.productImage && (
@@ -48,7 +48,7 @@ const SOFA = () => {
         )}
       </div>
       <div className="w-screen h-20 flex items-center justify-center">
-        <Link href={"/sofas"}>
+        <Link href={"/Sofas"}>
           <button className="w-[345px] h-12 border border-[#B88E2F]  text-[#B88E2F] mt-12">
             Show More
           </button>

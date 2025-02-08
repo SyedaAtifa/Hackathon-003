@@ -12,7 +12,7 @@ import Link from 'next/link'
 import { urlFor } from '@/sanity/lib/image'
 import { useRouter } from 'next/navigation'
 
-function page() {
+function CartPage() {
 
     const [cartItems, setCartItems] = useState<Product[]>([])
 
@@ -72,7 +72,7 @@ function page() {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire("success", "Your order has been successfully processed.", "success");
-                router.push("/checkout");
+                router.push("/Checkout");
                 setCartItems([]);
             }
         })
@@ -162,6 +162,6 @@ function page() {
     );
 }
 
-export default page;
+export default CartPage;
 
 

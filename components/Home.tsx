@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 function Home() {
     return (
-        <div className="w-screen h-auto flex flex-col items-center justify-center mt-12 font-poppins md:w-[1100px]">
+        <div className="w-screen h-auto flex flex-col items-center justify-center mt-12 font-poppins">
             {/* range */}
             <div className="w-[1183px] h-[685px] xsm:w-auto">
                 <div className="h-[76px] flex flex-col items-center justify-center gap-3">
-                    <h4 className="text-4xl fobt-bold text-[#333333]">Browse The Range</h4>
+                    <h4 className="text-3xl font-bold text-[#333333]">Browse The Range</h4>
                     <p className="text-xl xsm:text-[13px] text-[#666666]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
                 {/* items */}
@@ -23,7 +23,7 @@ function Home() {
                     </div>
 
                     <div className='transition-transform duration-100 hover:scale-90 shadow-xl' >
-                        <Image src={"/images/Bedroom.svg"} alt='brdroom' width={381} height={480} />
+                        <Image src={"/images/Bedroom.svg"} alt='bedroom' width={381} height={480} />
                         <h6 className="text-2xl font-medium text-center mt-2">Bedroom</h6>
                     </div>
                 </div>

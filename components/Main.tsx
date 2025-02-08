@@ -3,7 +3,7 @@ import React from 'react'
 
 function Main() {
   return (
-    <div className="home w-screen h-[771px] flex items-center justify-end font-poppins md:w-[1100px]">
+    <div className="home w-screen h-[771px] flex items-center justify-end font-poppins">
       <div className="w-[643px] h-[443px] bg-[#FFF3E3] mr-14 flex items-center justify-center xsm:mr-0 xsm:w-screen xsm:p-8">
         <div className="w-[561px] h-[344px] flex flex-col gap-2">
           <p className="text-[#333333] font-semibold">New Arrival</p>

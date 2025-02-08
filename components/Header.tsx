@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 
 function Header() {
   return (
-    <div className="h-[100px] w-screen flex items-center justify-center md:w-[1100px]">
+    <div className="h-[100px] w-screen flex items-center justify-center m">
       <header className="h-10 w-[1286px] flex justify-between">
         <div className="w-[160px] flex">
           <Image src={"/images/logo.svg"} alt='logo' width={50} height={32} />
@@ -45,6 +44,7 @@ function Header() {
 
           <Link href={"/"}>
             <Image
+            className="xsm:hidden"
               src={"/images/search.svg"}
               alt='search'
               width={28}
@@ -54,7 +54,7 @@ function Header() {
 
           <Link href={"/"}>
             <Image
-            className="xsm:hidden"
+              className="xsm:hidden"
               src={"/images/wishlist.svg"}
               alt='wishlist'
               width={28}
@@ -62,18 +62,26 @@ function Header() {
             />
           </Link>
 
-          <Link href={"/cart"}>
+          <Link href={"/Cart"}>
             <Image
+            className="xsm:w-6 xsm:h-8"
               src={"/images/cart.svg"}
               alt='cart'
               width={28}
               height={28}
             />
           </Link>
+          <Image
+            className="hidden xsm:block"
+            src={"/images/Column.svg"}
+            alt='column'
+            width={48}
+            height={48}
+          />
         </div>
       </header>
     </div >
-)
+  )
 }
 
 
