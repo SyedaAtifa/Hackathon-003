@@ -60,7 +60,7 @@ function CartPage() {
     }
 
     const router = useRouter();
-    const handleProceed = (_id?: any) => {
+    const handleProceed = (_id?: string) => {
         Swal.fire({
             title: "proceed to checkout?",
             text: "Please review your cart before checkout.",
